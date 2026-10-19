@@ -4,15 +4,17 @@ Data accompanying *Selecting angle estimates for shallow-water acoustic localiza
 
 ## Download
 
-Download both ZIP files from [Release v1.0.0](https://github.com/lianjie228/shallow-water-angle-selection-data/releases/tag/v1.0.0). GitHub's automatically generated source-code ZIP contains repository documentation, not the measurement archives.
+Download all eleven ZIP files from [Release v1.0.0](https://github.com/lianjie228/shallow-water-angle-selection-data/releases/tag/v1.0.0). GitHub's automatically generated source-code ZIP contains repository documentation, not the measurement archives.
 
 | File | Contents |
 |---|---|
-| hydroacoustic_raw_10kHz.zip | 158 original MAT measurement files, stored under raw/ |
+| hydroacoustic_raw_10kHz_part_01.zip through part_10.zip | 158 original MAT measurement files, stored under raw/ |
 | simulation_and_processed_data.zip | 934 simulation, protocol and processed-result files |
 | hydroacoustic_file_manifest.csv | Raw-file sizes and SHA-256 hashes, matched against the experiment inventory |
 | simulation_file_manifest.csv | Published and source-file hashes and relative paths |
-| SHA256SUMS.txt | SHA-256 checksums of the two ZIP archives |
+| SHA256SUMS.txt | SHA-256 checksums of the eleven ZIP archives |
+
+The ten measurement ZIP files can each be extracted independently into the same directory; together they contain all 158 original MAT files.
 
 ## Measurement format
 
