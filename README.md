@@ -18,9 +18,9 @@ The ten measurement ZIP files can each be extracted independently into the same 
 
 ## Measurement format
 
-The MAT files contain the double-precision matrix `U`, with seven rows (channels) and columns representing samples. Sampling frequency is 10,000 Hz. MATLAB can load a file using `load('115249.mat')`; Python can use `scipy.io.loadmat`. The inspected file 115249.mat has shape 7 by 149796. File lengths should be read from each matrix.
+The MAT files contain a double-precision matrix named `U` (148 files) or `UU` (10 files), with seven rows (channels) and columns representing samples. Sampling frequency is 10,000 Hz. MATLAB can load a file using `load('115249.mat')`; Python can use `scipy.io.loadmat`; select `U` if present, otherwise `UU`. The inspected file 115249.mat has shape 7 by 149796. File lengths should be read from each matrix.
 
-The paper uses pressure channel 4 (MATLAB `U(4,:)`, Python `U[3,:]`). Other channel identities and absolute calibration are not specified here. Filenames are acquisition identifiers. The original archive is described as vector-hydrophone measurements of a 60–400 Hz linear frequency-modulated signal.
+The paper uses pressure channel 4 (MATLAB `U(4,:)`, Python `U[3,:]`, or the equivalent row of `UU`). Other channel identities and absolute calibration are not specified here. Filenames are acquisition identifiers. The original archive is described as vector-hydrophone measurements of a 60–400 Hz linear frequency-modulated signal.
 
 `output/主线验证与小论文修订_20261002/field/background_manifest.csv` identifies the six temporal groups, the development/evaluation split (62/96 files), background segments and original hashes. The release preserves all 158 MAT files byte-for-byte. Unrelated Word documents and the MATLAB script bundled in the supplied archive are excluded.
 
